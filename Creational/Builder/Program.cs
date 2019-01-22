@@ -6,7 +6,15 @@ namespace Creational.Builder
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // inheritance builder
+            var me = PersonA.New
+                .Called("Sergii")
+                .WorksAsA("Developer")
+                .Build();
+
+            Console.WriteLine(me);
+
+            Console.ReadKey();
         }
     }
 }
