@@ -16,7 +16,7 @@
         }
     }
 
-    public abstract class PersonBuilder
+    public abstract class PersonABuilder
     {
         protected PersonA person = new PersonA();
 
@@ -25,13 +25,13 @@
             return person;
         }
 
-        public static implicit operator PersonA(PersonBuilder pb)
+        public static implicit operator PersonA(PersonABuilder pb)
         {
             return pb.person;
         }
     }
 
-    public class PersonInfoBuilder<SELF> : PersonBuilder
+    public class PersonInfoBuilder<SELF> : PersonABuilder
       where SELF : PersonInfoBuilder<SELF>
     {
         public SELF Called(string name)
