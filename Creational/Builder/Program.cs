@@ -26,6 +26,10 @@ namespace Creational.Builder
                 .Earning(123000);
             Console.WriteLine(person);
 
+            // exercise builder
+            var cb = new CodeClass.CodeBuilder("Person").AddField("Name", "string").AddField("Age", "int");
+            Console.WriteLine(((CodeClass)cb).ToString());
+
             Console.ReadKey();
         }
     }
