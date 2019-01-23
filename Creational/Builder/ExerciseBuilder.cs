@@ -7,49 +7,47 @@ namespace Creational.Builder
     {
         public string Name { get; set; }
         public string Type { get; set; }
+
+        public override string ToString()
+        {
+            return $"public {Type} {Name}";
+        }
     }
 
     public class CodeClass
     {
-        public static string Name { get; set; }
-        public IList<Field> Fields = new List<Field>();
+        public string Name { get; set; }
+        public IList<Field> Fields { get; set; }
 
-        public class CodeBuilder : ConcreteCodeBuilder<CodeBuilder>
+        public CodeClass()
         {
-            public CodeBuilder(string className)
-            {
-                CodeClass.Name = className;
-            }
+            Fields = new List<Field>();
         }
 
         public override string ToString()
         {
-            const int spaces = 4;
-            var tab = new string(' ', spaces);
             var sb = new StringBuilder();
-            sb.AppendLine($"Name of class : {Name}");
-            for (var i = 0; i < Fields.Count; i++)
+            sb.AppendLine($"public class {Name}").AppendLine("{");
+            foreach (var field in Fields)
             {
-                sb.AppendLine($"{tab}Field-{i + 1}: name - {Fields[i].Name}, type - {Fields[i].Type}");
+                sb.AppendLine($"  {field};");
             }
+            sb.AppendLine("}");
 
             return sb.ToString();
         }
     }
 
-    public abstract class AbstractCodeBuilder
+    public class CodeBuilder
     {
-        protected CodeClass Class = new CodeClass();
+        private CodeClass Class { get; set; }
 
-        public static implicit operator CodeClass(AbstractCodeBuilder cb)
+        public CodeBuilder(string className)
         {
-            return cb.Class;
+            Class = new CodeClass { Name = className };
         }
-    }
 
-    public class ConcreteCodeBuilder<T> : AbstractCodeBuilder where T : ConcreteCodeBuilder<T>
-    {
-        public T AddField(string fieldName, string fieldType)
+        public CodeBuilder AddField(string fieldName, string fieldType)
         {
             Class.Fields.Add(new Field
             {
@@ -57,53 +55,12 @@ namespace Creational.Builder
                 Type = fieldType
             });
 
-            return (T) this;
+            return this;
+        }
+
+        public override string ToString()
+        {
+            return Class.ToString();
         }
     }
-
-    //public class Person
-    //{
-    //    public string Name;
-    //    public int Age;
-
-        //    public class Builder : AgeCodeBuilder<Builder> { }
-
-        //    public override string ToString()
-        //    {
-        //        return $"{nameof(Name)}: {Name}, {nameof(Age)}: {Age}";
-        //    }
-        //}
-
-        //public abstract class CodeBuilder
-        //{
-        //    protected Person person = new Person();
-
-        //    public Person Build()
-        //    {
-        //        return person;
-        //    }
-
-        //    public static implicit operator Person(CodeBuilder pb)
-        //    {
-        //        return pb.person;
-        //    }
-        //}
-
-        //public class NameCodeBuilder<T> : CodeBuilder where T : NameCodeBuilder<T>
-        //{
-        //    public NameCodeBuilder<T> AddField(string name)
-        //    {
-        //        this.person.Name = name;
-        //        return (T)this;
-        //    }
-        //}
-
-        //public class AgeCodeBuilder<T> : NameCodeBuilder<AgeCodeBuilder<T>> where T : AgeCodeBuilder<T>
-        //{
-        //    public AgeCodeBuilder<T> AddField(int age)
-        //    {
-        //        this.person.Age = age;
-        //        return (T)this;
-        //    }
-        //}
 }

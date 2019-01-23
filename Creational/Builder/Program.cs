@@ -12,6 +12,7 @@ namespace Creational.Builder
                 .WorksAsA("Developer")
                 .Build();
             Console.WriteLine(me);
+            Console.WriteLine();
 
             // facets builder
             var pb = new PersonBBuilder();
@@ -25,10 +26,12 @@ namespace Creational.Builder
                 .AsA("Engineer")
                 .Earning(123000);
             Console.WriteLine(person);
+            Console.WriteLine();
 
             // exercise builder
-            var cb = new CodeClass.CodeBuilder("Person").AddField("Name", "string").AddField("Age", "int");
-            Console.WriteLine(((CodeClass)cb).ToString());
+            var cb = new CodeBuilder("Person").AddField("Name", "string").AddField("Age", "int");
+            Console.WriteLine(cb);
+            Console.WriteLine();
 
             Console.ReadKey();
         }
