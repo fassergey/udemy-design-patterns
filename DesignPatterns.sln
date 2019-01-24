@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factory", "Creational\Facto
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryMethod", "Creational\FactoryMethod\FactoryMethod.csproj", "{CFF53724-9077-4198-9085-C89697355D1E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototype", "Prototype\Prototype.csproj", "{521FA625-BC0D-4029-A69D-3C71B51C972E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{CFF53724-9077-4198-9085-C89697355D1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFF53724-9077-4198-9085-C89697355D1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFF53724-9077-4198-9085-C89697355D1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{521FA625-BC0D-4029-A69D-3C71B51C972E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{521FA625-BC0D-4029-A69D-3C71B51C972E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{521FA625-BC0D-4029-A69D-3C71B51C972E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{521FA625-BC0D-4029-A69D-3C71B51C972E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -37,6 +43,7 @@ Global
 		{BA13CFB2-D13F-462E-B4C4-CBC6DF92D870} = {B2EDE9EA-F126-4E2F-B2E9-B8F6B47A8526}
 		{5E8F9335-9819-4770-8407-49BC5C185DDB} = {B2EDE9EA-F126-4E2F-B2E9-B8F6B47A8526}
 		{CFF53724-9077-4198-9085-C89697355D1E} = {B2EDE9EA-F126-4E2F-B2E9-B8F6B47A8526}
+		{521FA625-BC0D-4029-A69D-3C71B51C972E} = {B2EDE9EA-F126-4E2F-B2E9-B8F6B47A8526}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {481FC4EE-AA42-4CD7-9DF6-4FA21FA892DB}
