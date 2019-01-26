@@ -1,5 +1,7 @@
 ﻿using System;
 
+/* When construction gets a little bit too complicated */
+
 namespace Creational.Builder
 {
     class Program

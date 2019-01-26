@@ -1,6 +1,8 @@
 ﻿using System;
 using static System.Console;
 
+/* When it is easier to copy an existing object to fully initialize a new copy */
+
 namespace Prototype
 {
     class Program
