@@ -6,6 +6,10 @@ using System.IO;
 using System.Linq;
 using static System.Console;
 
+/*
+    Singleton - a component which is instantiated only once.
+*/
+
 namespace Singleton
 {
 

@@ -2,6 +2,11 @@
 
 /* When construction gets a little bit too complicated */
 
+    /*
+     Builder - when piecewise object construction is complecated, 
+     provide an API for doing it succinctly.
+     */
+
 namespace Creational.Builder
 {
     class Program

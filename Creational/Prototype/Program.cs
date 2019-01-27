@@ -3,6 +3,11 @@ using static System.Console;
 
 /* When it is easier to copy an existing object to fully initialize a new copy */
 
+    /*
+     Prototype - a partially or fully initialized object that you
+     copy (clone) and make use of.
+     */
+
 namespace Prototype
 {
     class Program

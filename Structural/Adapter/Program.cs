@@ -8,6 +8,11 @@ using static System.Console;
 
 /* Getting interface you want from the interface you have */
 
+    /*
+     Adapter - a construct which adapts an existing interface X to 
+     conform to the required interface Y.
+     */
+
 namespace Adapter
 {
     public class Point

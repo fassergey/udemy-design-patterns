@@ -4,6 +4,11 @@ using static System.Console;
 
 /* Connecting components together through abstractions */
 
+/*
+ Bridge - a mechanism that decouples an interface (hierarchy)
+ from an implementation (hierarchy).
+ */
+
 namespace Bridge
 {
     public interface IRenderer

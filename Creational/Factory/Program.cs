@@ -2,6 +2,11 @@
 
 namespace Factory
 {
+    /*
+     Factory - a component responsible solely for the wholesale 
+     (not piecewise) creation of objects.
+         */
+
     public enum CoordinateSystem
     {
         Cartesian,
