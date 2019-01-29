@@ -343,15 +343,4 @@ namespace Decorator
             set => sb[index] = value;
         }
     }
-
-    public class Demo
-    {
-        static void Main(string[] args)
-        {
-            MyStringBuilder s = "hello ";
-            s += "world"; // will work even without op+ in MyStringBuilder
-                          // why? you figure it out!
-            WriteLine(s);
-        }
-    }
 }

@@ -378,6 +378,40 @@ namespace Decorator
                 .AppendLine("{")
                 .AppendLine("}");
             WriteLine(cb);
+            WriteLine();
+
+            // adapter-decorator
+            MyStringBuilder s = "hello ";
+            s += "world"; // will work even without op+ in MyStringBuilder
+                          // why? you figure it out!
+            WriteLine(s);
+            WriteLine();
+
+            // multiple inheritance
+            var dragon = new Dragon { Weight = 123 };
+            dragon.Fly();
+            dragon.Crawl();
+            WriteLine();
+
+            // dynamic decorator composition
+            var square = new Square(1.23f);
+            WriteLine(square.AsString());
+
+            var redSquare = new ColoredShape(square, "red");
+            WriteLine(redSquare.AsString());
+
+            var redHalfTransparentSquare = new TransparentShape(redSquare, 0.5f);
+            WriteLine(redHalfTransparentSquare.AsString());
+
+            // static decorator composition
+            ColoredShape<Circle> blueCircle = new ColoredShape<Circle>("blue");
+            WriteLine(blueCircle.AsString());
+
+            TransparentShape<ColoredShape<Square>> blackHalfSquare = new TransparentShape<ColoredShape<Square>>(0.4f);
+            WriteLine(blackHalfSquare.AsString());
+
+            ColoredShape<TransparentShape<Circle>> whiteHalfCircle = new ColoredShape<TransparentShape<Circle>>("white");
+            WriteLine(whiteHalfCircle.AsString());
         }
     }
 }
