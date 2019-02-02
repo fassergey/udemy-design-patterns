@@ -1,7 +1,4 @@
-﻿using JetBrains.dotMemoryUnit;
-using NUnit.Framework;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using static System.Console;
 
@@ -48,79 +45,22 @@ namespace Flyweight
         public string FullName => string.Join(' ', names.Select(i => strings[i]));
     }
 
-    //[TestFixture]
+    
     class Program
     {
         static void Main(string[] args)
         {
-            //var ft = new FormattedText("This is a brave new world");
-            //ft.Capitalize(10, 15);
-            //WriteLine(ft);
+            var ft = new FormattedText("This is a brave new world");
+            ft.Capitalize(10, 15);
+            WriteLine(ft);
 
-            //var bft = new BetterFormattedText("This is a brave new world");
-            //bft.GetRange(10, 15).Capitalize = true;
-            //WriteLine(bft);
+            var bft = new BetterFormattedText("This is a brave new world");
+            bft.GetRange(10, 15).Capitalize = true;
+            WriteLine(bft);
 
             var sentence = new Sentence("Hello world");
             sentence[1].Capitalize = true;
             WriteLine(sentence);
-        }
-
-        [Test]
-        public void TestUser()
-        {
-            var firstNames = Enumerable.Range(0, 100).Select(_ => RandomString());
-            var lastNames = Enumerable.Range(0, 100).Select(_ => RandomString());
-
-            var users = new List<User>();
-
-            foreach (var firstName in firstNames)
-                foreach (var lastName in lastNames)
-            {
-                    users.Add(new User($"{firstName} {lastName}"));
-            }
-
-            ForceGC();
-
-            dotMemory.Check(memory => {
-                WriteLine(memory.SizeInBytes);
-            });
-        }
-
-        [Test]
-        public void TestUser2()
-        {
-            var firstNames = Enumerable.Range(0, 100).Select(_ => RandomString());
-            var lastNames = Enumerable.Range(0, 100).Select(_ => RandomString());
-
-            var users = new List<User2>();
-
-            foreach (var firstName in firstNames)
-                foreach (var lastName in lastNames)
-                {
-                    users.Add(new User2($"{firstName} {lastName}"));
-                }
-
-            ForceGC();
-
-            dotMemory.Check(memory => {
-                WriteLine(memory.SizeInBytes);
-            });
-        }
-
-        private void ForceGC()
-        {
-            GC.Collect();
-            GC.WaitForPendingFinalizers();
-            GC.Collect();
-        }
-
-        private string RandomString()
-        {
-            var rand = new Random();
-            return new string(Enumerable.Range(0,10)
-                .Select(i => (char)('a' + rand.Next(26)))
-                .ToArray());
         }
     }
 }
