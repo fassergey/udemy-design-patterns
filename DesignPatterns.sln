@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Decorator", "Structural\Dec
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Facade", "Structural\Facade\Facade.csproj", "{40C35755-3476-4E1F-B3EF-EDA756940836}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flyweight", "Structural\Flyweight\Flyweight.csproj", "{81EED246-0D5B-46CA-BE36-9817FF0E908D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flyweight", "Structural\Flyweight\Flyweight.csproj", "{81EED246-0D5B-46CA-BE36-9817FF0E908D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proxy", "Structural\Proxy\Proxy.csproj", "{E3C99800-3F4C-4D09-8B89-90F0B98B048D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +81,10 @@ Global
 		{81EED246-0D5B-46CA-BE36-9817FF0E908D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81EED246-0D5B-46CA-BE36-9817FF0E908D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81EED246-0D5B-46CA-BE36-9817FF0E908D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3C99800-3F4C-4D09-8B89-90F0B98B048D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3C99800-3F4C-4D09-8B89-90F0B98B048D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3C99800-3F4C-4D09-8B89-90F0B98B048D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3C99800-3F4C-4D09-8B89-90F0B98B048D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -95,6 +101,7 @@ Global
 		{68BFCBA7-E582-4247-819C-FE20CBE34B9A} = {D95FFB2E-B93D-4272-894D-10AD72F3A944}
 		{40C35755-3476-4E1F-B3EF-EDA756940836} = {D95FFB2E-B93D-4272-894D-10AD72F3A944}
 		{81EED246-0D5B-46CA-BE36-9817FF0E908D} = {D95FFB2E-B93D-4272-894D-10AD72F3A944}
+		{E3C99800-3F4C-4D09-8B89-90F0B98B048D} = {D95FFB2E-B93D-4272-894D-10AD72F3A944}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {481FC4EE-AA42-4CD7-9DF6-4FA21FA892DB}
