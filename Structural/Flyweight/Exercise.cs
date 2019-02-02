@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Text;
 
 namespace Flyweight
 {
     public class Sentence
     {
-        private string planeText;
-        private WordToken token = new WordToken();
+        private readonly string planeText;
+        private readonly WordToken token = new WordToken();
 
         public Sentence(string pt)
         {

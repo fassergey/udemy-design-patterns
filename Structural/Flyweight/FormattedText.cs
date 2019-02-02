@@ -5,7 +5,7 @@ namespace Flyweight
 {
     public class FormattedText
     {
-        private string plainText;
+        private readonly string plainText;
 
         public FormattedText(string plainText)
         {
@@ -35,7 +35,7 @@ namespace Flyweight
 
     public class BetterFormattedText
     {
-        private string plainText;
+        private readonly string plainText;
         private List<TextRange> formatting = new List<TextRange>();
 
         public BetterFormattedText(string plainText)
