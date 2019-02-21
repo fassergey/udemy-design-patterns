@@ -57,6 +57,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateMethod", "Behaviora
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visitor", "Behavioral\Visitor\Visitor.csproj", "{50B21122-F4AC-41AD-BC28-C04A4BFC36C2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bonus", "Bonus", "{2C7A62A9-897B-422B-AD98-322B8E8B404A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalIoC", "Bonus\LocalIoC\LocalIoC.csproj", "{C88A9637-C52C-467B-BD39-446A3D831359}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -159,6 +163,10 @@ Global
 		{50B21122-F4AC-41AD-BC28-C04A4BFC36C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50B21122-F4AC-41AD-BC28-C04A4BFC36C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50B21122-F4AC-41AD-BC28-C04A4BFC36C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C88A9637-C52C-467B-BD39-446A3D831359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C88A9637-C52C-467B-BD39-446A3D831359}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C88A9637-C52C-467B-BD39-446A3D831359}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C88A9637-C52C-467B-BD39-446A3D831359}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -188,6 +196,7 @@ Global
 		{31164F3A-2EDB-4124-B4AB-CBB082122CA3} = {92669C70-9208-43D0-8B9D-83B5A96E05DF}
 		{D69A442F-38CC-4CB5-8770-DAF19B299989} = {92669C70-9208-43D0-8B9D-83B5A96E05DF}
 		{50B21122-F4AC-41AD-BC28-C04A4BFC36C2} = {92669C70-9208-43D0-8B9D-83B5A96E05DF}
+		{C88A9637-C52C-467B-BD39-446A3D831359} = {2C7A62A9-897B-422B-AD98-322B8E8B404A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {481FC4EE-AA42-4CD7-9DF6-4FA21FA892DB}
