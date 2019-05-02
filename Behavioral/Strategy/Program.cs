@@ -11,7 +11,7 @@
     {
         static void Main(string[] args)
         {
-            DynamicStartegy.Run();
+            DynamicStrategy.Run();
 
             StaticStrategy.Run();
         }

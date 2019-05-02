@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Strategy
 {
-    public class DynamicStartegy
+    public class DynamicStrategy
     {
         public enum OutputFormat
         {
