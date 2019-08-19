@@ -1,6 +1,4 @@
-﻿using System;
-using static System.Console;
-using System.Text;
+﻿using static System.Console;
 
 namespace Proxy
 {
@@ -30,7 +28,7 @@ namespace Proxy
     internal class CarProxy : ICar
     {
         private readonly Driver driver;
-        private ICar car = new Car();
+        private readonly ICar car = new Car();
 
         public CarProxy(Driver driver)
         {

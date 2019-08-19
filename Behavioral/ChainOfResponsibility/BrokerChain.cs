@@ -14,7 +14,7 @@ namespace ChainOfResponsibility.BrokerChain
 
     public class Query
     {
-        public string CretureName;
+        public string CreatureName;
 
         public enum Argument
         {
@@ -25,9 +25,9 @@ namespace ChainOfResponsibility.BrokerChain
 
         public int Value;
 
-        public Query(string cretureName, Argument whatToQuery, int value)
+        public Query(string creatureName, Argument whatToQuery, int value)
         {
-            CretureName = cretureName ?? throw new ArgumentNullException(paramName: nameof(cretureName));
+            CreatureName = creatureName ?? throw new ArgumentNullException(paramName: nameof(creatureName));
             WhatToQuery = whatToQuery;
             Value = value;
         }
@@ -101,7 +101,7 @@ namespace ChainOfResponsibility.BrokerChain
 
         protected override void Handle(object sender, Query q)
         {
-            if (q.CretureName == creature.Name && q.WhatToQuery == Query.Argument.Attack)
+            if (q.CreatureName == creature.Name && q.WhatToQuery == Query.Argument.Attack)
             {
                 q.Value *= 2;
             }
@@ -116,7 +116,7 @@ namespace ChainOfResponsibility.BrokerChain
 
         protected override void Handle(object sender, Query q)
         {
-            if (q.CretureName == creature.Name && q.WhatToQuery == Query.Argument.Defense)
+            if (q.CreatureName == creature.Name && q.WhatToQuery == Query.Argument.Defense)
             {
                 q.Value += 3;
             }

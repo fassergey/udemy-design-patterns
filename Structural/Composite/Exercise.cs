@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Composite
 {
@@ -31,11 +32,7 @@ namespace Composite
     {
         public static int Sum(this List<IValueContainer> containers)
         {
-            int result = 0;
-            foreach (var c in containers)
-                foreach (var i in c)
-                    result += i;
-            return result;
+            return containers.SelectMany(c => c).Sum();
         }
     }
 }

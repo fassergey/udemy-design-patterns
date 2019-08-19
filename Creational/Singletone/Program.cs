@@ -2,6 +2,7 @@
 using MoreLinq;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using static System.Console;
@@ -46,7 +47,7 @@ namespace Singleton
     {
         private Dictionary<string, int> capitals;
 
-        private OrdinaryDatabase()
+        public OrdinaryDatabase()
         {
             WriteLine("Initializing database");
 
@@ -74,6 +75,11 @@ namespace Singleton
 
             var cb = new ContainerBuilder();
             cb.RegisterType<OrdinaryDatabase>().As<IDatabase>().SingleInstance();
+            var container = cb.Build();
+
+            var odb1 = container.Resolve<IDatabase>();
+            var odb2 = container.Resolve<IDatabase>();
+            WriteLine($"Does OrdinaryDatabase return the same instance? : {odb1 != null && odb1.Equals(odb2)}");
 
             // monostate
             var ceo1 = new CEO() {
@@ -83,8 +89,6 @@ namespace Singleton
 
             var ceo2 = new CEO();
             WriteLine(ceo2);
-
-            ReadKey();
         }
     }
 }

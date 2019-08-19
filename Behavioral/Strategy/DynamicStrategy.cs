@@ -18,7 +18,7 @@ namespace Strategy
         {
             void Start(StringBuilder sb);
             void End(StringBuilder sb);
-            void AddlistItem(StringBuilder sb, string item);
+            void AddListItem(StringBuilder sb, string item);
         }
 
         public class HtmlListStrategy : IListStrategy
@@ -33,7 +33,7 @@ namespace Strategy
                 sb.AppendLine("</ul>");
             }
 
-            public void AddlistItem(StringBuilder sb, string item)
+            public void AddListItem(StringBuilder sb, string item)
             {
                 sb.AppendLine($"<li>{item}</li>");
             }
@@ -49,7 +49,7 @@ namespace Strategy
             {
             }
 
-            public void AddlistItem(StringBuilder sb, string item)
+            public void AddListItem(StringBuilder sb, string item)
             {
                 sb.AppendLine($" * {item}");
             }
@@ -80,7 +80,7 @@ namespace Strategy
                 listStrategy.Start(sb);
                 foreach (var item in items)
                 {
-                    listStrategy.AddlistItem(sb, item);
+                    listStrategy.AddListItem(sb, item);
                 }
                 listStrategy.End(sb);
             }

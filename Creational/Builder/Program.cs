@@ -3,7 +3,7 @@
 /* When construction gets a little bit too complicated */
 
     /*
-     Builder - when piecewise object construction is complecated, 
+     Builder - when piecewise object construction is complicated, 
      provide an API for doing it succinctly.
      */
 
